@@ -24,7 +24,7 @@ export function renderPokeCard(data) {
     <div class="pokemon-data">
 
       <div class="pokemon">
-        <img src="${pokeImage}" alt="${pokeName}">
+        <img class="image" src="${pokeImage}" alt="${pokeName}"crossorigin="anonymous">
       </div>
 
       <div class="data">

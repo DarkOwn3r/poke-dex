@@ -1,5 +1,5 @@
 import { renderPokeCard } from "./modules/renderPokeCard.js";
-import VanillaTilt from "vanilla-tilt";
+import { renderFx } from "./modules/renderFx.js";
 
 const promises = [];
 
@@ -19,10 +19,5 @@ for (let i = 1; i < 152; i++) {
 
 Promise.all(promises)
   .then((responses) => {
-    const cards = document.querySelectorAll(".card");
-    VanillaTilt.init(cards, {
-      max: 25,
-      speed: 400,
-      glare: true
-    });
+    renderFx();
   });
