@@ -3,9 +3,9 @@ import { renderFx } from "./modules/renderFx.js";
 
 const promises = [];
 
-function getPokemon(id) {
+async function getPokemon(id) {
   const URL = `https://pokeapi.co/api/v2/pokemon/${id}`;
-  const promise = fetch(URL)
+  const promise = await fetch(URL)
     .then((response) => response.json())
     .then((data) => {
       renderPokeCard(data);
@@ -14,7 +14,7 @@ function getPokemon(id) {
 }
 
 for (let i = 1; i < 152; i++) {
-  getPokemon(i);
+  await getPokemon(i);
 }
 
 Promise.all(promises)
