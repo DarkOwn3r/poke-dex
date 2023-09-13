@@ -14,7 +14,7 @@ async function getPokemon(id) {
 }
 
 for (let i = 1; i < 152; i++) {
-  await getPokemon(i);
+  getPokemon(i);
 }
 
 Promise.all(promises)
